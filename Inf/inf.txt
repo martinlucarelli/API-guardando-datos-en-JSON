@@ -1,0 +1,59 @@
+
+En este proyecto lo que hice fue crear un modelo basico de un alumno, para eso cree la clase alumno y le defini sus atributos, luego cree
+la clase AlumnoController y alli defini la logica para que se envien y reciban los datos.
+
+Dentro de controller lo que hago es crear una lista que almacena los alumnos, el logger un string que almacena la ruta del archivo que vamos
+a consultar. Luego en el constructor iniciamos el logger y despues, mediante un condicional nos fijamos si el archivo que queremos consultar
+existe, si existe lo que hacemos es traer todos los datos a la lista, si no existe o si da error al encotrar el archivo inicializamos la lista.Luego
+mediante otro condicional nos fijamos si la lista esta vacia, si lo esta, se agregan 4 alumnos.
+
+Luego vienen las opereaciones de GET/POST/DELETE,
+
+GET: Retorna la lista de alumnos
+POST: Recibe por parametro un objeto tipo alumno , lo agrega a la lista y luego con JsonSerializer lo guarda en el archio JSON
+DELETE: Recibe por parametro un Guid que es el tipo de dato que almacena el ID se cre una instancia de alumno y se la iguala a la operacion que
+se va a encargar de buscar en la lista un id excactamente igual a la que se recibio por parametro, si el objeto queda null va a dar un error
+notFound, si se encontro el alumno que se quiere borrar se borrara de la lista y luego se guarda esa lista en el archivo JSON.
+
+
+
+
+<<<<<Errores y dudas que surgieron>>>>>>>>>
+
+- ReadOnly: Permite asingar una variable en el constructor o cuando se declara y luego no se puede modificar mas.
+
+- Problema con las barras invertidas: Cuando creo el string que envia el path del archivo que se quiere consultar, me daba error en cada barra
+    invertida, esto se soluciona de dos meneras.
+            1- agregar otra barra invertida al lado de las que ya estan.
+            2- agregar un @ antes de las comillas.
+
+-Guardar datos en JSON prolijo: Si a la hora de guardar datos en el archivo JSON no usamos {WriteIndented= true}, los datos se van a guardar
+    uno al lado del otro en la linea 1.
+
+-Problema con JsonSerializer y el constructor de Alumno: Tuve un error a la hora de realizar el POST ya que no me guardaba los datos en el archivo
+    esto se daba porque el JsonSerializer no reonocia los parametros del constructor ya que los habia definido con un nombre distinto a los de
+    los atributos.
+
+        Ej:
+
+                public Alumno(string nombre,string apellido, int edad, int anio)  --> Asi los reconoce
+                {
+                    this. id= Guid.NewGuid();
+                    this.nombre=nombre;
+                    this.apellido=apellido;
+                    this.edad=edad;
+                    this.anio=anio;
+                }
+
+                public Alumno(string n,string a, int e, int a) --> Asi no los reconoce
+                {
+                    this. id= Guid.NewGuid();
+                    this.nombre=nombre;
+                    this.apellido=apellido;
+                    this.edad=edad;
+                    this.anio=anio;
+                }
+
+    Por lo tanto habia que definir los parametros con el mismo nombre que los atributos, o tambien se puede crear otro constructor que no reciba
+    parametros.
+

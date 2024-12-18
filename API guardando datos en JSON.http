@@ -1,0 +1,6 @@
+@API_guardando_datos_en_JSON_HostAddress = http://localhost:5067
+
+GET {{API_guardando_datos_en_JSON_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

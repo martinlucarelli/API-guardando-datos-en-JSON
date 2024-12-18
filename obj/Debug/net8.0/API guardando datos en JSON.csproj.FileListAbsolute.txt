@@ -1,0 +1,33 @@
+F:\Desktop\Projects\API guardando datos en JSON\bin\Debug\net8.0\appsettings.Development.json
+F:\Desktop\Projects\API guardando datos en JSON\bin\Debug\net8.0\appsettings.json
+F:\Desktop\Projects\API guardando datos en JSON\bin\Debug\net8.0\Inf\Alumnos.json
+F:\Desktop\Projects\API guardando datos en JSON\bin\Debug\net8.0\API guardando datos en JSON.exe
+F:\Desktop\Projects\API guardando datos en JSON\bin\Debug\net8.0\API guardando datos en JSON.deps.json
+F:\Desktop\Projects\API guardando datos en JSON\bin\Debug\net8.0\API guardando datos en JSON.runtimeconfig.json
+F:\Desktop\Projects\API guardando datos en JSON\bin\Debug\net8.0\API guardando datos en JSON.dll
+F:\Desktop\Projects\API guardando datos en JSON\bin\Debug\net8.0\API guardando datos en JSON.pdb
+F:\Desktop\Projects\API guardando datos en JSON\bin\Debug\net8.0\Microsoft.OpenApi.dll
+F:\Desktop\Projects\API guardando datos en JSON\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+F:\Desktop\Projects\API guardando datos en JSON\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\Desktop\Projects\API guardando datos en JSON\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\API guardando datos en JSON.csproj.AssemblyReference.cache
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\API guardando datos en JSON.GeneratedMSBuildEditorConfig.editorconfig
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\API guardando datos en JSON.AssemblyInfoInputs.cache
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\API guardando datos en JSON.AssemblyInfo.cs
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\API guardando datos en JSON.csproj.CoreCompileInputs.cache
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\API guardando datos en JSON.MvcApplicationPartsAssemblyInfo.cs
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\API guardando datos en JSON.MvcApplicationPartsAssemblyInfo.cache
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\staticwebassets.build.json
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\staticwebassets.development.json
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\staticwebassets\msbuild.API guardando datos en JSON.Microsoft.AspNetCore.StaticWebAssets.props
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\staticwebassets\msbuild.build.API guardando datos en JSON.props
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.API guardando datos en JSON.props
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.API guardando datos en JSON.props
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\staticwebassets.pack.json
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\scopedcss\bundle\API guardando datos en JSON.styles.css
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\API guar.537B633B.Up2Date
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\API guardando datos en JSON.dll
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\refint\API guardando datos en JSON.dll
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\API guardando datos en JSON.pdb
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\API guardando datos en JSON.genruntimeconfig.cache
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\ref\API guardando datos en JSON.dll

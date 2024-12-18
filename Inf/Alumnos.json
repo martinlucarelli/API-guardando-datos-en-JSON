@@ -1,0 +1,65 @@
+[
+  {
+    "id": "c81640c4-7d19-4a06-8efe-61b076f9b71f",
+    "nombre": "Mario",
+    "apellido": "Artoc",
+    "edad": 15,
+    "anio": 3
+  },
+  {
+    "id": "7a73ecf4-44ef-4164-a231-667e11639d97",
+    "nombre": "Candela",
+    "apellido": "Veron",
+    "edad": 18,
+    "anio": 6
+  },
+  {
+    "id": "f490f525-acfe-4d2d-b5c4-ffbaa512970b",
+    "nombre": "Martin",
+    "apellido": "Luchetti",
+    "edad": 17,
+    "anio": 5
+  },
+  {
+    "id": "84d1334b-7ac4-48ff-bbe2-7862df86841b",
+    "nombre": "Esteban",
+    "apellido": "Quito",
+    "edad": 13,
+    "anio": 1
+  },
+  {
+    "id": "fba9c541-26d4-4826-9e1b-712661adc5bb",
+    "nombre": "Luka",
+    "apellido": "Prata",
+    "edad": 18,
+    "anio": 6
+  },
+  {
+    "id": "914a8550-cb61-46f8-9c27-188e1958a29f",
+    "nombre": "Alicia",
+    "apellido": "Richard",
+    "edad": 14,
+    "anio": 2
+  },
+  {
+    "id": "5b946b9a-70c5-4cf5-bd07-4764cbc0f56a",
+    "nombre": "Alvaro",
+    "apellido": "Maura",
+    "edad": 15,
+    "anio": 3
+  },
+  {
+    "id": "15fd3a3c-3cc6-41fb-befc-94c90e2b6a2b",
+    "nombre": "Elias",
+    "apellido": "Rutth",
+    "edad": 13,
+    "anio": 2
+  },
+  {
+    "id": "0713f728-7ee5-4480-b892-945a586c9bcb",
+    "nombre": "Juan Martin",
+    "apellido": "Pujeckt",
+    "edad": 12,
+    "anio": 1
+  }
+]
