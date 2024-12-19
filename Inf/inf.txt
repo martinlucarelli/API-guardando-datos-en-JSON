@@ -1,4 +1,6 @@
 
+<<<<1era parte>>>>>>
+
 En este proyecto lo que hice fue crear un modelo basico de un alumno, para eso cree la clase alumno y le defini sus atributos, luego cree
 la clase AlumnoController y alli defini la logica para que se envien y reciban los datos.
 
@@ -57,3 +59,29 @@ notFound, si se encontro el alumno que se quiere borrar se borrara de la lista y
     Por lo tanto habia que definir los parametros con el mismo nombre que los atributos, o tambien se puede crear otro constructor que no reciba
     parametros.
 
+
+
+<<<<2da parte>>>>>>
+
+Inyección de Dependencias
+Concepto y Aplicación:
+
+Implementamos inyección de dependencias para desacoplar el Controller de la lógica principal, que trasladamos a un Service (AlumnoService).
+La lógica para manejar la lista de alumnos y las operaciones sobre el archivo JSON fue encapsulada dentro del AlumnoService. Esto incluye leer, agregar, y eliminar alumnos, además de inicializar una lista con datos predeterminados si el archivo no existe o está vacío.
+Registro del Service:
+
+Usamos AddScoped<IAlumnoService, AlumnoService>() en Program.cs para registrar la implementación concreta (AlumnoService) con su interfaz (IAlumnoService). Esto permite que el Controller reciba la dependencia automáticamente a través de su constructor.
+Errores y Soluciones:
+
+Error Inicial: No se estaba resolviendo correctamente la dependencia en el Controller porque habíamos registrado el servicio como AddScoped<AlumnoService>() en lugar de asociarlo a la interfaz. Esto causaba el error:
+"Unable to resolve service for type 'IAlumnoService'..."
+Solución: Ajustamos el registro a AddScoped<IAlumnoService, AlumnoService>() para que el contenedor supiera qué implementación usar al inyectar IAlumnoService.
+Middleware
+Logger:
+
+Implementamos el uso de un logger (ILogger) tanto en el Controller como en el Service para registrar eventos importantes, como errores al leer el archivo JSON o información sobre las operaciones realizadas.
+Colocamos el logger en el Service porque es el lugar donde sucede la lógica central. Esto asegura que se registren los eventos relevantes, sin duplicar lógica en el Controller.
+Errores y Mejora del Middleware:
+
+Problema Inicial: Se discutió la ubicación correcta del logger. Inicialmente, se pensó en colocarlo en el Controller, pero se determinó que lo más adecuado era centralizar los logs en el Service, ya que ahí ocurre la lógica.
+Solución: Se implementaron logs significativos para capturar errores y resultados de las operaciones.
