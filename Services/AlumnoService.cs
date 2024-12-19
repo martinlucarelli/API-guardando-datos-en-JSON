@@ -8,10 +8,10 @@ public class AlumnoService : IAlumnoService
 {
 
     public readonly string _filePath = "F:\\Desktop\\Projects\\API guardando datos en JSON\\Inf\\Alumnos.json"; //aca va el path del archivo que queremos leer
-    public readonly ILogger<AlumnosController> _logger;
+    public readonly ILogger<AlumnoService> _logger;
 
 
-    public AlumnoService(ILogger<AlumnosController> logger) { _logger = logger;}
+    public AlumnoService(ILogger<AlumnoService> logger) { _logger = logger;}
 
     public IEnumerable<Alumno> Get()
     {
@@ -46,7 +46,9 @@ public class AlumnoService : IAlumnoService
             listaDeAlumnos.Add(new Alumno("Esteban", "Quito", 13, 1));
         }
 
+        _logger.LogInformation("SE MOSTRO CORRECTAMENTE LA LISTA DE ALUMNOS");
         return listaDeAlumnos;
+        
     }
 
     public void Save(Alumno a)
@@ -57,6 +59,8 @@ public class AlumnoService : IAlumnoService
 
         string json = JsonSerializer.Serialize(listaDeAlumnos,new JsonSerializerOptions {WriteIndented= true});
         System.IO.File.WriteAllText(_filePath,json);
+
+        _logger.LogInformation("SE GUARDO CORRECTAMENTE LA LISTA");
 
     }
 
@@ -74,6 +78,7 @@ public class AlumnoService : IAlumnoService
             System.IO.File.WriteAllText(_filePath, json);
         }
 
+        _logger.LogInformation("SE ELIMINO CORRECTAMENTE EL REGISTRO");
 
     }
 
