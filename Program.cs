@@ -7,6 +7,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Inyeccion de dependencias
+
+builder.Services.AddScoped<IAlumnoService,AlumnoService>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -15,6 +20,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseRegisterMethodMiddleware();
 
 app.UseHttpsRedirection();
 

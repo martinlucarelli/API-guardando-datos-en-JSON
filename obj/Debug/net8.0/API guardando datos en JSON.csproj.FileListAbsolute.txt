@@ -31,3 +31,4 @@ F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\refint\API guar
 F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\API guardando datos en JSON.pdb
 F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\API guardando datos en JSON.genruntimeconfig.cache
 F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\ref\API guardando datos en JSON.dll
+F:\Desktop\Projects\API guardando datos en JSON\obj\Debug\net8.0\API guardando datos en JSON.sourcelink.json

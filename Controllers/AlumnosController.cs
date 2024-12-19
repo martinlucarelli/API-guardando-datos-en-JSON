@@ -12,45 +12,11 @@ namespace API_guardando_datos_en_JSON;
 public class AlumnosController : ControllerBase
 {
 
-    public List<Alumno> listaDeAlumnos;
+   private readonly IAlumnoService _alumnoService;
 
-    public readonly ILogger<AlumnosController> _logger;
-
-    public readonly string _filePath = "F:\\Desktop\\Projects\\API guardando datos en JSON\\Inf\\Alumnos.json"; //aca va el path del archivo que queremos leer
-
-    public AlumnosController(ILogger<AlumnosController> logger)
+    public AlumnosController(IAlumnoService alumnoService)
     {
-        _logger=logger;
-
-        if(System.IO.File.Exists(_filePath))
-        {
-            try
-            {
-                var json = System.IO.File.ReadAllText(_filePath);
-                listaDeAlumnos = JsonSerializer.Deserialize<List<Alumno>>(json);
-
-
-            }
-            catch( Exception ex)
-            {
-                _logger.LogError("Error al leer el archivo JSON " + ex.Message);
-                listaDeAlumnos=new List<Alumno>();
-            }
-        }
-        else
-        {
-
-            listaDeAlumnos = new List<Alumno>();
-        }
-
-        if(!listaDeAlumnos.Any())
-        {
-            listaDeAlumnos.Add(new Alumno("Mario","Artoc",15,3));
-            listaDeAlumnos.Add(new Alumno("Candela","Veron",18,6));
-            listaDeAlumnos.Add(new Alumno("Martin","Luchetti",17,5));
-            listaDeAlumnos.Add(new Alumno("Esteban","Quito",13,1));
-        }
-
+        _alumnoService = alumnoService;
     }
 
 
@@ -58,17 +24,14 @@ public class AlumnosController : ControllerBase
 
     public IEnumerable<Alumno> Get()
     {
-        return listaDeAlumnos;
+        return _alumnoService.Get();
     }
 
     [HttpPost]
-    public IActionResult Post(Alumno a)
+    public IActionResult Post([FromBody] Alumno a)
     {
-        listaDeAlumnos.Add(a);
+        _alumnoService.Save(a);
         
-        string json = JsonSerializer.Serialize(listaDeAlumnos,new JsonSerializerOptions {WriteIndented= true});
-        System.IO.File.WriteAllText(_filePath,json);
-
         return Ok();
     }
 
@@ -77,17 +40,8 @@ public class AlumnosController : ControllerBase
     public IActionResult Delete(Guid id)
     {
 
-        Alumno a = listaDeAlumnos.FirstOrDefault(c=> c.id == id);
-        
-        if(a == null)
-        {
-            return NotFound();
-        }
+      _alumnoService.Delete(id);
 
-        listaDeAlumnos.Remove(a);
-
-        System.IO.File.WriteAllText(_filePath, JsonSerializer.Serialize(listaDeAlumnos));
-        
         return Ok();
     }
 
